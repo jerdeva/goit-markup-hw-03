@@ -239,11 +239,10 @@ img{
 
 .doing.list{
     display: flex;
-    /* justify-content: space-between; */
     flex-wrap: wrap;
-        margin: 0;
-        padding: 0;
-        margin-right: -24px;
+    margin: 0;
+    padding: 0;
+    margin-right: -24px;
 }
 .doing-img{
     width: calc((100% / 3) - 24px);
@@ -362,7 +361,7 @@ img{
     border: none;
 }
 
-.portfolio-list {
+.portfolio-list.list {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
@@ -377,6 +376,7 @@ img{
     margin-right: 24px;
     margin-top: 48px; 
 }
+
 
 
 .portfolio-name{
