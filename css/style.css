@@ -24,10 +24,13 @@ body{
 /* убираем подчеркивание на ссылках */
 .link {
     text-decoration: none;
+    display: block;
 }
 /* задаем контейнер */
 .container{
     width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
     /* outline: 2px solid coral; */
@@ -44,7 +47,6 @@ button{
 }
 img{
     display: block;
-    padding-bottom: 32px;
     max-width: 100%;
     height: auto;
 }
@@ -52,12 +54,10 @@ img{
 
 /* HEADER */
 .header-page{
-        border-bottom: 1px solid #E7E9FC;
-            padding-top: 24px;
+    border-bottom: 1px solid #E7E9FC;
 }
 .header.container{
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
 
 }
@@ -71,8 +71,8 @@ img{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 800;
-    margin-bottom: 16px;
-
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 /* надпись Studio */
 .logo-studio-header{
@@ -85,7 +85,7 @@ img{
 }
 .site-nav{
     display: flex;
-    padding-left: 72px;
+    margin-left: 72px;
 }
 /* навигация стайта */
 .nav-area{
@@ -98,6 +98,8 @@ img{
     font-weight: 500;
     letter-spacing: 0.02em;
     text-decoration: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .site-nav .link:hover,
 .site-nav .link:focus{
@@ -106,7 +108,6 @@ img{
 
 .menu-title{
     margin-right: 40px;
-    padding-bottom: 20px;
 }
 .menu-title.last{
     margin-right: 0;
@@ -126,7 +127,8 @@ img{
     font-size: 16px;
     line-height: 1.5;
     text-decoration: none;
-    
+    padding-bottom: 24px;
+    padding-top: 24px;
 }
 .contacts-nav .contacts-link:hover,
 .contacts-nav .contacts-link:focus{
@@ -171,7 +173,8 @@ img{
     border-radius: 4px;
     padding: 16px 32px;
     display: inline-block;
-    margin: 48px auto;
+    margin: 48px auto 0;
+    border: none;
 }
 .button-order:hover, .button-order:focus{
     background: #404BBF;
@@ -192,7 +195,7 @@ img{
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 0.02em;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 
 
@@ -202,18 +205,27 @@ img{
 }
 .our-service.list{
     display: flex;
-   justify-content: space-between;
+   flex-wrap:wrap;
+   margin: 0;
+   padding: 0;
+    margin-left: -24px;
 }
 .our-service .our-service-title{
     color:var(--secondary-color);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 .service-list{
-    width: 264px;
+    width: calc((100% / 4) - 24px);
+    margin-left: 24px;
 }
+
+.our-service-text{
+   width:  264px;
+}
+
 .our-service .paragraph{
     color: var(--primary-text-color);
     font-weight: 400;
@@ -227,13 +239,20 @@ img{
 
 .doing.list{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        margin-right: -24px;
 }
 .doing-img{
-    padding-bottom: 0;
+    width: calc((100% / 3) - 24px);
+    margin-right: 24px;
 }
 
-
+.doing-img.last{
+    margin-right: 0;
+}
 
 /* 4 sect our team */
 .section.team{
@@ -242,7 +261,17 @@ img{
 .our-team.list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin-right: -24px;
+}
+.our-team-part{
+    width: calc((100% / 4) - 24px);
+    margin-right: 24px;
+}
+
+.our-team-part.last{
+    margin-right: 0;
 }
 
 .our-team .members{
@@ -251,43 +280,41 @@ img{
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    padding-top: 32px;
 }
 .our-team .our-team-paragraph{
     color: var(--primary-text-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    padding-top: 8px;
-    padding-bottom: 32px;
+    margin-top: 8px;
+    margin-bottom: 32px;
 }
 
 .photo-team-caption{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    text-align: center;
     align-items: center;
-    padding: 0px;
-    gap: 8px;
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
+    padding-bottom: 32px;
+    padding-top: 32px;
 }
 
-.team-img{
-    padding-bottom: 0;
-}
+
 
 /* FOOTER */
-.footer{
+.container-footer{
+    width: 264px;
     padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.footer{
     background: var(--secondary-color);
 }
 .footer-paragraph{
     color: var(--accent-color);
-    width: 264px;
-    padding-top: 16px;
-    padding-bottom: 100px;
+    margin-top: 16px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -311,37 +338,55 @@ img{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    border: 1px solid #E7E9FC;
-    border-radius: 4px;
     display: inline-block;
     padding: 12px 24px;
-    margin-bottom: 72px;
     margin-right: 24px;
     text-align: center;
+    border: 1px solid #E7E9FC;
+    border-radius: 4px;
 }
 .buttons-item:active, .buttons-item:hover, .buttons-item:focus{
     background: #404BBF;
     color: var(--white-color);
     
 }
+.buttons-item.last-btn{
+    margin-right: 0;
+}
 
 /* portfolio links */
 .portfolio-buttons.list{
+    margin-bottom: 72px;
     display: flex;
     justify-content: center;
+    border: none;
 }
 
-
-.potfolio-title{
-    border: 1px solid #E7E9FC;
-    width: 360px;
-    margin-bottom: 48px;
-}
-
-.potfolio-list{
+.portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    margin-right: -24px;
+    margin-top: -48px;
+}
+
+ .portfolio-list > .potfolio-title{
+    /* outline: 1px solid red; */
+    width: calc((100% / 3) - 24px);
+    margin-right: 24px;
+    margin-top: 48px; 
+}
+
+
+.portfolio-name{
+    width: 360px;
+    border: solid #E7E9FC;
+    border-top: none;
+    border-radius: 4px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    padding-left: 16px;
 }
 
 .project-name{
@@ -349,16 +394,16 @@ img{
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0.02em
+    letter-spacing: 0.02em;
 }
+
 
 .project-paragrapher{
     color: var(--primary-text-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    padding-top: 8px;
-    padding-bottom: 32px;
+    margin-top: 8px;
 }
 
 
