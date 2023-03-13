@@ -286,7 +286,6 @@ img{
     font-size: 16px;
     line-height: 1.5;
     margin-top: 8px;
-    margin-bottom: 32px;
 }
 
 .photo-team-caption{
@@ -303,13 +302,13 @@ img{
 
 /* FOOTER */
 .container-footer{
-    width: 264px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    width: 264px;   
 }
 
 .footer{
     background: var(--secondary-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 .footer-paragraph{
     color: var(--accent-color);
@@ -317,6 +316,10 @@ img{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
+}
+.logo-web.footer-logo{
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 
@@ -387,6 +390,7 @@ img{
     padding-bottom: 32px;
     padding-top: 32px;
     padding-left: 16px;
+    border: 1px solid #E7E9FC
 }
 
 .project-name{
